@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="google.BuscarProduto" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-11-30T12:57:18" hostname="LAPTOP-ANGELICA" time="137.43">
+  <properties/>
+  <testcase name="consultarSite[0]" classname="google.BuscarProduto" time="32.264"/>
+  <testcase name="consultarSite[1]" classname="google.BuscarProduto" time="35.912"/>
+  <testcase name="consultarSite[2]" classname="google.BuscarProduto" time="40.09"/>
+  <testcase name="consultarSite[3]" classname="google.BuscarProduto" time="29.163"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 18204
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+nov 30, 2020 9:57:22 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMAÇÕES: Detected dialect: W3C
+1606741071128	geckodriver	INFO	Listening on 127.0.0.1:29947
+1606741071692	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\angel\\AppData\\Local\\Temp\\rust_mozprofilebruU9y"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606741075111	Marionette	INFO	Listening on port 49870
+1606741075398	Marionette	WARN	TLS certificate errors will be ignored for this session
+nov 30, 2020 9:57:55 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMAÇÕES: Detected dialect: W3C
+console.warn: SearchTelemetry: "Expected to report URI for" "https://www.google.com/search?source=hp&ei=U-zEX62EO4jG5OUP7KCwgAU&q=taco&oq=taco&gs_lcp=CgZwc3ktYWIQA1DzMliKM2CWM2gAcAB4AIABAIgBAJIBAJgBAKABAaoBB2d3cy13aXo&sclient=psy-ab&ved=0ahUKEwjt-dD4qKrtAhUII7kGHWwQDFAQ4dUDCAY&uact=5" "with ads but couldn't find the information"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+Starting MSEdgeDriver 87.0.664.47 (ba159091e772c52e16e8d82850f3c8b934507b5d) on port 30909
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping MSEdgeDriver safe.
+MSEdgeDriver was started successfully.
+nov 30, 2020 9:58:30 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMAÇÕES: Detected dialect: W3C
+Started InternetExplorerDriver server (32-bit)
+3.150.1.0
+Listening on port 15021
+Only local connections are allowed
+nov 30, 2020 9:59:08 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMAÇÕES: Detected dialect: W3C
+]]></system-err>
+</testsuite>
