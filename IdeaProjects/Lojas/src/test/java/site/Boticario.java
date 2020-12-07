@@ -1,5 +1,6 @@
 package site;
 
+
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -15,22 +16,22 @@ import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class Boticario {
-    String url = "https://www.boticario.com.br";
+    //String url = "https://www.boticario.com.br";
+    String url = "https://www.google.com";
     WebDriver driver;
     String pastaPrint = "evidencias/" + new SimpleDateFormat("yyyy-MM-dd HH-mm").format(Calendar.getInstance().getTime()) + "/";
 
     public void tirarPrint(String nomePrint) throws IOException {
-        File foto = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); //grava na memÃ³ria RAM
+        File foto = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); //grava na memória RAM
         FileUtils.copyFile(foto,new File(pastaPrint + nomePrint + ".png")); // grava no arquivo em disco
     }
 
 
     @Before
     public void iniciar(){
-        ChromeOptions chOptions = new ChromeOptions(); // instanciar o objeto de configuraÃ§Ã£o do chromeDriver
+        ChromeOptions chOptions = new ChromeOptions(); // instanciar o objeto de configuração do chromeDriver
         chOptions.addArguments("--disable-notifications");
 
         System.setProperty("webdriver.chrome.driver","drivers/chrome/87/chromedriver.exe");
@@ -40,7 +41,7 @@ public class Boticario {
     }
 
 
-    @Test
+   // @Test
     public void consultarItem() throws InterruptedException, IOException {
         driver.get(url);
         tirarPrint("Boticario Passo 1 - Acessou a Home");
@@ -59,11 +60,12 @@ public class Boticario {
         Thread.sleep(3000);
 
         // Validar o nome do curso
-        String resultadoEsperado = new String("Coffee Woman Seduction Desodorante ColÃ´nia 100ml".getBytes(), "UTF-8");
+        //String resultadoEsperado = new String("Coffee Woman Seduction Desodorante Colônia 100ml".getBytes(), StandardCharsets.UTF_8);
+        String resultadoEsperado = "Coffee Woman Seduction Desodorante Colônia 100ml";
         String resultadoAtual = driver.findElement(By.cssSelector("h1.nproduct-title")).getText();
         assertEquals(resultadoEsperado,resultadoAtual);
 
-        // validar o preÃ§o
+        // validar o preço
         assertEquals("R$ 139,90",driver.findElement(By.cssSelector("div.nproduct-price-value")).getText());
 
         // Validar o valor das parcelas
@@ -72,9 +74,34 @@ public class Boticario {
 
     }
 
+
+    @Test
+    public void consultarSite() throws InterruptedException, IOException {
+        driver.get(url);
+        tirarPrint("Passo 1 - Acessou o Google");
+        driver.findElement(By.cssSelector("input.gLFyf.gsfi")).sendKeys("carrefour" + Keys.ENTER); //Pesquisa pelo item
+        Thread.sleep(15000);
+        tirarPrint("Passo 2 - Exibe as pesquisas sobre site ");
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//cite[contains(.,'carrefour')]")).click(); // clica para entrar no site escolhido
+        Thread.sleep(15000);
+
+        //validar a pagina
+        String actualTitle = driver.getTitle();
+       // String expectedTitle = "saraiva";
+        //String expectedTitle = StringUtils.capitalize("saraiva");
+        String str = "carrefour";
+        String result = str.substring(0, 1).toUpperCase() + str.substring(1);
+        assertEquals(result,actualTitle);
+        //assertTrue( driver.findElement(By.cssSelector("div.ou-parcele")).getText().contains(parcelamento));
+
+    }
+
+
     @After
     public void finalizar(){
-          driver.quit();
+
+        driver.quit();
     }
 
 }
