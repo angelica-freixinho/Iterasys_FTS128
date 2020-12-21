@@ -32,7 +32,7 @@ public class BuscarProduto {
     // 3.1 - Atributos = Características
     static String url; // guardará o endereço do site alvo
     WebDriver driver;
-    String pastaPrint = "evidencias/" + new SimpleDateFormat("yyyy-MM-dd HH-ss").format(Calendar.getInstance().getTime()) + "/";
+    String pastaPrint = "evidencias/" + new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(Calendar.getInstance().getTime()) + "/";
 
     // 3.2 métodos e funções
     // métodos ou funções de apoio (util / commons)

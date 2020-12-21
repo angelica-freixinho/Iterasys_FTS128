@@ -21,6 +21,7 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertEquals;
 
 public class CadastroLogin {
+    /*
     String url;
     WebDriver driver;
     String pastaPrint = "evidencias/" + new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(Calendar.getInstance().getTime()) + "/";
@@ -31,7 +32,7 @@ public class CadastroLogin {
     }
 
     @Before
-    public void iniciar() {
+    public void iniciar2() {
         url = "https://www.petz.com.br";
         System.setProperty("webdriver.chrome.driver", "drivers/chrome/87/chromedriver.exe");
         driver = new ChromeDriver();
@@ -138,7 +139,7 @@ public class CadastroLogin {
         tirarPrint("Passo 12 - Exibe a mensagem de dados incorretos");
 
     }
-
+*/
 }
 
 

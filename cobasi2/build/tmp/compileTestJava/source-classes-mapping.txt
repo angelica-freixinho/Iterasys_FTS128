@@ -1,0 +1,12 @@
+pages/Produto.java
+ pages.Produto
+pages/Lista.java
+ pages.Lista
+pages/Home.java
+ pages.Home
+pages/PageObject.java
+ pages.PageObject
+utils/Evidences.java
+ utils.Evidences
+steps/ConsultaProduto.java
+ steps.ConsultaProduto
