@@ -62,7 +62,7 @@ public class ConsultaProduto {
 
     @Dado("^que acesso o site da Cobasi \"([^\"]*)\"$")
     public void queAcessoOSiteDaCobasi(String id) throws InterruptedException, IOException {
-
+        this.id = id;
         driver.get(url);
         System.out.println("Passo 1 - Acesso a página da Cobasi");
         evidences.takesScreenshot(driver, id, pastaPrint, "Passo 1 - Acessou o site da Cobasi");
