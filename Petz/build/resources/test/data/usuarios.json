@@ -1,0 +1,24 @@
+{
+  "user1":
+  {
+    "id": 1,
+    "username": "juca",
+    "firstName": "Juca",
+    "lastName": "Silva",
+    "email": "juca.silva@teste.com.br",
+    "password": "12345678",
+    "phone": "1199999999",
+    "userStatus": 1
+  },
+  "user2":
+  {
+    "id": 2,
+    "username": "ana",
+    "firstName": "Ana",
+    "lastName": "Souza",
+    "email": "ana.souza@teste.com.br",
+    "password": "87654321",
+    "phone": "2188888888",
+    "userStatus": 1
+  }
+}
