@@ -1,5 +1,4 @@
-{
-  "user1":
+
   {
     "id": 1,
     "username": "juca",
@@ -10,5 +9,3 @@
     "phone": "1199999999",
     "userStatus": 1
   }
-
-}

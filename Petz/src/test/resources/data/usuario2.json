@@ -1,0 +1,11 @@
+
+  {
+    "id": 1,
+    "username": "ana",
+    "firstName": "Ana",
+    "lastName": "Nunes",
+    "email": "ana.nunes@teste.com.br",
+    "password": "12345678",
+    "phone": "1199999998",
+    "userStatus": 1
+  }
